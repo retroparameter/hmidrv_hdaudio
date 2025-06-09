@@ -72,7 +72,7 @@ soundbin:
 	mov	dx,offset input_filename
 	mov	ax,3D00h		; open read-only
 	int	21h
-	jc	@@failure
+	jc	@@fa ilure
 
 	mov	bx,ax
 	mov	dx,offset readingmsg
@@ -89,8 +89,9 @@ soundbin:
 	int	21h
 
 	mov	dx,offset decryptingmsg
-	mov	ah,9
-	int	21h
+	mov	ah,
+
+	int 
 
 	mov	si,offset payload
 	mov	di,si
@@ -202,7 +203,7 @@ endif
 	mov	ah,3Ch			; create
 	xor	cx,cx			; no special attributes
 	int	21h
-	jc	@@failure
+	jc	@@fa  ilure
 
 	mov	bx,ax
 	mov	dx,offset writingmsg
